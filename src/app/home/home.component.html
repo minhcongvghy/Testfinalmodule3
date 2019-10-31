@@ -1,0 +1,13 @@
+<div class="text-info">
+  <button class="btn col-md-2" style="background: darkkhaki" [routerLink]="'/create'" >Thêm</button>
+  <table border="1" style="width: 50%">
+    <tr>
+      <td><h3>Danh sách đọc</h3></td>
+      <td></td>
+    </tr>
+    <tr *ngFor="let book of bookList,index as i">
+      <td [ngClass]="book.read === true ? 'done' : '' ">{{book.name}}</td>
+      <td><button (click)="seen(i)" class="btn border-primary" style="background: darkgoldenrod" >Đã Đọc</button></td>
+    </tr>
+  </table>
+</div>
